@@ -35,8 +35,18 @@ class GradientContainer extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            TextButton(
+            OutlinedButton(
               onPressed: () {},
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.zero,
+                    side: BorderSide(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
               child: const Text(
                 'Start Quiz',
                 style: TextStyle(
