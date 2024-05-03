@@ -1,3 +1,4 @@
+import 'package:adv_basics/styled_text.dart';
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
@@ -16,12 +17,36 @@ class GradientContainer extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
       ),
-      child: const Text(
-        style: TextStyle(
-          fontSize: 28,
-          color: Colors.white,
+      child: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/images/quiz-logo.png',
+              width: 300,
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const StyledText(
+              'Learn Flutter the fun way!',
+              22,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Start Quiz',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+            )
+          ],
         ),
-        'Hello world',
       ),
     );
   }
